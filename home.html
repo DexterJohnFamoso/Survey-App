@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container bg-info">
+
+<div class="row" style="margin-top:10px; margin-bottom:10px">
+
+<div class="col-sm-4">
+	
+<form action="insert.php" method="post">
+  <div class="form-group">
+    <label for="name">User name:</label>
+  </div>
+  <div class="form-group">
+    <label for="email">Email id:</label>
+  </div>
+</form>
+</div>
+<div class="col-sm-8" style="border: groove;">
+	<h4>List of Surveys</h4>
+	 <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Survey ID</th>
+        <th>Survey name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><?php echo $row['survey_id']; ?></td>
+        <td><?php echo $row['survey_name']; ?></td>
+         <td>
+           <a href="update.php?u_id=<?php echo $row['user_id']; ?>" class="btn btn-info" role="button">Update</a>
+           <a href="delete.php?u_id=<?php echo $row['user_id']; ?>" class="btn btn-danger" role="button">Delete</a>
+         </td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-bottom: 10px; margin-right: ">Add</button>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Add Survey</h4>
+        </div>
+        <div class="form-group">
+    <label class="col-sm-3 control-label">Survey name</label>
+    <div class="col-sm-8">
+    <input class="form-control" id="focusedInput" type="text">
+    <br>
+    </div>
+    <div class="form-group">
+   <label class="col-sm-3 control-label">Choice 1</label>
+    <div class="col-sm-8">
+    <input class="form-control" id="focusedInput" type="text">
+    <br>
+    </div>
+    <div class="form-group">
+    <label class="col-sm-3 control-label">Choice 2</label>
+    <div class="col-sm-8">
+    <input class="form-control" id="focusedInput" type="text">
+    <br>
+    </div>
+    <div class="form-group">
+    <label class="col-sm-3 control-label">Choice 3</label>
+    <div class="col-sm-8">
+    <input class="form-control" id="focusedInput" type="text">
+    <br>
+    </div>
+    <div class="form-group">
+    <label class="col-sm-3 control-label">Choice 4</label>
+    <div class="col-sm-8">
+    <input class="form-control" id="focusedInput" type="text">
+    <br>
+    </div>
+        <div class="modal-footer">
+          <center><button type="button" class="btn btn-success" data-dismiss="modal">Add</button></center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+ <script src="js/jquery.min.js"></script>
+ <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
