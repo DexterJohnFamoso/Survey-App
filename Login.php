@@ -9,9 +9,14 @@
 </head>
 <!-- Where all the magic happens -->
 <!-- LOGIN FORM -->
+<style>
+body{
+  background-color: skyblue;
+}
+</style>
 <body>
-	<div class="container bg-info">
-		<div class="col-md-4 col-md-offset-4">
+<div class="container">
+<div class="col-md-4 col-md-offset-4">
 <div class="row" style="margin-top:10px; margin-bottom:10px">
 
 <center>
@@ -24,7 +29,7 @@
     <input type="password" class="form-control" id="pass" placeholder="Password">
   </div>
   <div align="center">
-  <a href="home.html" class="btn btn-primary" role="button">Login</a>
+  <a href="home.php" class="btn btn-primary" role="button">Login</a>
   <button type="submit" class="btn btn-primary">Register</button>
   </center>
 </div>
