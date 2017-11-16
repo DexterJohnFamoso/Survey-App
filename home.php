@@ -14,6 +14,15 @@
   body{
     background-color: skyblue;
   }
+  .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: white;
+   color: white;
+   text-align: center;
+}
 </style>
 <body>
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0" >
@@ -44,6 +53,99 @@
       </tr>
     </tbody>
   </table>
+          <div class="footer">
+   <p></p>
+</div>
+<button type="button1" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1" style="margin-bottom: 10px; margin-right: ">Contact us</button>
+<div class="modal fade" id="myModal1" role="dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                <div class="row">
+                                <div class="col-md-12">
+                                <div class="panel-body">
+                                  
+                            <div class="jumbotron jumbotron-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">
+                    Contact us <small>Feel free to contact us</small></h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">
+                                Subject</label>
+                            <select id="subject" name="subject" class="form-control" required="required">
+                                <option value="na" selected="">Choose One:</option>
+                                <option value="service">General Customer Service</option>
+                                <option value="suggestions">Suggestions</option>
+                                <option value="product">Product Support</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Message</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                            Send Message</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <form>
+            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+            <address>
+                <strong>UNO-R, Inc.</strong><br>
+                #51 Lizares Avenue<br>
+                Bacolod City, Philippines<br>
+                <abbr title="Phone">
+                    P:</abbr>
+                (123) 456-7890
+            </address>
+            <address>
+                <strong>Full Name</strong><br>
+                <a href="mailto:#">bojiefamoso@gmail.com</a>
+            </address>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-bottom: 10px; margin-right: ">Add</button>
 
                                 <div class="modal fade" id="myModal" role="dialog">
@@ -91,8 +193,6 @@ $result = $db->query($query);
   </div>
 </div>
 </div>
-</fieldset>
-</form>
 </fieldset>
  <script src="js/jquery.min.js"></script>
  <script src="bootstrap/js/bootstrap.min.js"></script>
